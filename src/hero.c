@@ -7,6 +7,13 @@ void hero_movement(data_t *data)
 
     //Movement basique
     call_hmovement(data);
+    //Attaque
+    // Deux if sinon l'animation s'arrêterai au moment où je lâche le bouton
+    if (sfKeyboard_isKeyPressed(sfKeySpace) && data->hero->if_attack == 0) {
+        data->hero->if_attack = 1;
+    }
+    if (data->hero->if_attack == 1)
+        make_attack(data->hero);
 }
 
 void print_hero(hero_t *hero, sfRenderWindow *window)
@@ -31,7 +38,7 @@ void create_hero(hero_t *hero)
     sfSprite_setScale(hero->sprite, (sfVector2f){1.7, 1.7});
     hero->clock = sfClock_create();
     hero->clock2 = sfClock_create();
-    hero->att = 0;
+    hero->if_attack = 0;
     hero->text = sfText_create();
     hero->fonte = sfFont_createFromFile("assets/BohemianTypewriter.ttf");
     hero->text2 = sfText_create();

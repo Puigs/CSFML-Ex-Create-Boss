@@ -31,10 +31,6 @@ typedef struct map_s {
     sfSprite *sprite;
     sfVector2f position;
     sfIntRect rect;
-    int left;
-    int bot;
-    int right;
-    int top;
 } map_t;
 
 typedef struct hero_s {
@@ -49,7 +45,7 @@ typedef struct hero_s {
     sfTime timer2;
     float seconds2;
     int pv;
-    int att;
+    int if_attack;
     sfText *text;
     sfFont *fonte;
     sfText *text2;
@@ -75,5 +71,6 @@ void call_hmovement(data_t *data);
 
 //animation
 void my_anime(hero_t *hero);
+void make_attack(hero_t *hero);
 
 #endif /* __MY_H__ */

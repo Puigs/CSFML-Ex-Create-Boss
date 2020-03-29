@@ -51,13 +51,13 @@ void down_side(data_t *data)
 void call_hmovement(data_t *data)
 {
     if (data->hero->seconds > 0.007) {
-        if (sfKeyboard_isKeyPressed(sfKeyZ) && data->hero->att == 0)
+        if (sfKeyboard_isKeyPressed(sfKeyZ) && data->hero->if_attack == 0)
             up_side(data);
-        if (sfKeyboard_isKeyPressed(sfKeyS) && data->hero->att == 0)
+        if (sfKeyboard_isKeyPressed(sfKeyS) && data->hero->if_attack == 0)
             down_side(data);
-        if (sfKeyboard_isKeyPressed(sfKeyD) && data->hero->att == 0)
+        if (sfKeyboard_isKeyPressed(sfKeyD) && data->hero->if_attack == 0)
             right_side(data);
-        if (sfKeyboard_isKeyPressed(sfKeyQ) && data->hero->att == 0)
+        if (sfKeyboard_isKeyPressed(sfKeyQ) && data->hero->if_attack == 0)
             left_side(data);
     }
 }
