@@ -1,10 +1,3 @@
-##
-## EPITECH PROJECT, 2018
-## Makefile
-## File description:
-## Puigsagur
-##
-
 CC		=	gcc
 
 CFLAGS	=	-Werror -Wall -Wextra -W
@@ -24,7 +17,7 @@ NAME	=	myBoss
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -o $(NAME) $(OBJ) -lcsfml-window -lcsfml-graphics -lcsfml-system -lcsfml-audio
+	$(CC) -o $(NAME) $(OBJ) $(CFLAGS) -lcsfml-window -lcsfml-graphics -lcsfml-system -lcsfml-audio
 
 clean:
 	rm -f $(OBJ)

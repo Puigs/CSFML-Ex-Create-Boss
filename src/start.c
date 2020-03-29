@@ -13,6 +13,8 @@ int start(data_t *data)
 {
     int check = init_data(data);
 
+    if (check != 0)
+        return (check);
     while (sfRenderWindow_isOpen(data->screen->window)) {
         //Gestion évènement
         manage_event(data);
@@ -25,5 +27,5 @@ int start(data_t *data)
         print_hero(data->hero, data->screen->window);
         sfRenderWindow_display(data->screen->window);
     }
-    return (check);
+    return (0);
 }

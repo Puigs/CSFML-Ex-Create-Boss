@@ -20,6 +20,9 @@ int init_data(data_t *data)
     data->map = malloc(sizeof(map_t));
     if (data->map == NULL)
         return (84);
+    data->boss = malloc(sizeof(boss_t));
+    if (data->boss == NULL)
+        return (84);
     create_hero(data->hero);
     create_map("assets/map8.png", (sfVector2f){0, 0}, \
     (sfIntRect){0, 0, 1920, 1080}, data);

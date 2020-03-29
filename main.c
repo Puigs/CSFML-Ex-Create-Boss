@@ -1,5 +1,14 @@
 #include "include/my.h"
 
+void do_free(data_t *data)
+{
+    free(data->screen);
+    free(data->hero);
+    free(data->map);
+    free(data->boss);
+    free(data);
+}
+
 int launch(data_t *data)
 {
     int check = 0;
@@ -21,6 +30,8 @@ int launch(data_t *data)
         return (84);
     sfRenderWindow_setFramerateLimit(data->screen->window, 50);
     check = start(data);
+    if (check == 0)
+        do_free(data);
     return (check);
 }
 

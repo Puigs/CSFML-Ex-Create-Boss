@@ -26,6 +26,10 @@ typedef struct screen_s {
     sfEvent event;
 } screen_t;
 
+typedef struct boss_s {
+
+} boss_t;
+
 typedef struct map_s {
     sfTexture *texture;
     sfSprite *sprite;
@@ -55,6 +59,7 @@ typedef struct data_s {
     screen_t *screen;
     hero_t *hero;
     map_t *map;
+    boss_t *boss;
 } data_t;
 
 //Launch

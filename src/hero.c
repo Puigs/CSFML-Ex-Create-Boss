@@ -7,8 +7,11 @@ void hero_movement(data_t *data)
 
     //Movement basique
     call_hmovement(data);
+    
     //Attaque
     // Deux if sinon l'animation s'arrêterai au moment où je lâche le bouton
+    //Evidemment des milliers de solutions sont possibles, par un soucis de rapididé (ok de flemme)
+    //J'ai choisi celle là
     if (sfKeyboard_isKeyPressed(sfKeySpace) && data->hero->if_attack == 0) {
         data->hero->if_attack = 1;
     }
