@@ -55,7 +55,18 @@ typedef struct hero_s {
     sfText *text2;
 }hero_t;
 
+typedef struct text_s {
+    sfTexture *texture;
+    sfSprite *sprite;
+    sfFont *font;
+    sfText *text;
+    sfVector2f pos;
+} text_t;
+
+
 typedef struct data_s {
+    int a;
+    text_t *text;
     screen_t *screen;
     hero_t *hero;
     map_t *map;

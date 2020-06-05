@@ -35,7 +35,7 @@ void create_hero(hero_t *hero)
     hero->rect.left = 0;
     hero->rect.width = 22;
     hero->rect.height = 26;
-    hero->pos.x = 500;
+    hero->pos.x = 1700;
     hero->pos.y = 500;
     hero->pv = 8;
     sfSprite_setScale(hero->sprite, (sfVector2f){1.7, 1.7});

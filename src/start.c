@@ -25,6 +25,10 @@ int start(data_t *data)
         sfRenderWindow_drawSprite(data->screen->window, \
         data->map->sprite, NULL);
         print_hero(data->hero, data->screen->window);
+        if (data->a != 0) {
+            sfRenderWindow_drawSprite(data->screen->window, data->text->sprite, NULL);
+            sfRenderWindow_drawText(data->screen->window, data->text->text, NULL);
+        }
         sfRenderWindow_display(data->screen->window);
     }
     return (0);

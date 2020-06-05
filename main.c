@@ -29,6 +29,7 @@ int launch(data_t *data)
     } else
         return (84);
     sfRenderWindow_setFramerateLimit(data->screen->window, 50);
+    data->a = 1;
     check = start(data);
     if (check == 0)
         do_free(data);
